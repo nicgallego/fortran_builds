@@ -1,0 +1,9 @@
+
+# define dependencies between object files
+tabulate.o: functions.o user_functions.mod
+
+# rebuild all object files in cas this make file changes
+$(OBJS): $(MAKEFILE_LIST)
+
+clean:
+	$(RM) $(filter %.o, $(OBJS)) $(wildcard *.mod) $(PROG)
