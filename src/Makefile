@@ -10,8 +10,8 @@ SRCS := tabulate.f90 functions.f90
 PROG := my_prog
 
 # append .o instead of substituiting it
-OBJS := $(addsufix .o, $(SRCS))
-
+OBJS := $(addsuffix .o, $(SRCS))
+	
 # defines entrypoints: all and clean
 .PHONY: all clean 
 all: $(PROG)
@@ -22,4 +22,16 @@ $(PROG): $(OBJS)
 $(OBJS): %.o: %
 	$(FC) -c -o $@ $<
 
+# define dependencies between object files
+tabulate.f90.o: functions.f90.o user_functions.mod
 
+# rebuild all object files in cas this make file changes
+$(OBJS): $(MAKEFILE_LIST)
+
+clean:
+	$(RM) $(filter %.o, $(OBJS)) $(wildcard *.mod) $(PROG)
+
+debug: 
+	echo $(SRCS)
+	echo $(addsuffix .o, hello.f90)
+	echo $(OBJS)

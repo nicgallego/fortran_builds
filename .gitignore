@@ -3,3 +3,4 @@ build*
 *.mod
 *.o
 *.exe
+my_prog
