@@ -1,3 +1,26 @@
+# Using this code
+
+This is a project made out of dummy code taken from tutorials of the different tools I put togeter, for learning how to interconnect a build system with documentation and testing systems for projects in fortran. Use it at your own risk of learning as well.
+
+If you already have meson and doxygen installed and would like to compile this code, do:
+
+``` 
+meson setup build
+```
+to configure the project. The build directory wil be contain all the build artifacts, only some content will be downloaded into subfolders, that I am ignoring from git. If somebody knows how to direct meson to download inside the build directory as cmake does let me know.
+
+Then you can build the project using ninja
+```
+ninja -C build
+```
+
+And run the tests through meson with
+```
+meson test -C build
+```
+
+[comming soon], generate documentation using Doxygen FIXME
+
 # Buildsystems for fortran
 
 From fortran-lang.org [resources](https://fortran-lang.org/learn/building_programs/build_tools/) candidates are:
@@ -53,3 +76,12 @@ Note: hit `<esc>` only at the end when all place holders have been replaced, oth
 ## Test system
 
 After an overview of available alternatives documented in the [fortran-wiki](https://fortranwiki.org/fortran/show/Unit+testing+frameworks) and my wish to stay as simple as possible, I will try [test-drive](https://github.com/fortran-lang/test-drive). Here included also the getting started code for test-drive.
+
+# Concluding remarks 
+
+We have achieved (with chatgpt assisting me parse some sparse documentation)
+- to set up a build system for Fortran project using meson
+- document the code using Doxygen blocks with the help of UltiSnips.
+- [FIXME] integrate doc target into meson 
+- to add test-drive as testing system and integrate it to meson project.
+
