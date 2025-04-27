@@ -1,5 +1,5 @@
 module test_suite1
-  use testdrive, only : new_unittest, unittest_type, error_type, check
+  use testdrive, only : new_unittest, unittest_type, error_type, check, test_failed
   implicit none
   private
 

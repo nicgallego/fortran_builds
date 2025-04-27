@@ -4,3 +4,7 @@ build*
 *.o
 *.exe
 my_prog
+
+# subprojects build folders
+subprojects/packagecache/
+subprojects/test-drive/

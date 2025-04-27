@@ -16,7 +16,7 @@ endforeach
 tester = executable(
   'tester',
   sources: test_srcs,
-  dependencies: [proj_dep, testdrive_dep],
+  dependencies: [testdrive_dep], # add here my sut later
 )
 
 test('all tests', tester)
