@@ -1,6 +1,6 @@
 # Using this code
 
-This is a project made out of dummy code taken from tutorials of the different tools I put togeter, for learning how to interconnect a build system with documentation and testing systems for projects in fortran. Use it at your own risk of learning as well.
+This is a project made out of dummy code taken from tutorials of the different tools I put together, for learning how to interconnect a build system with documentation and testing systems for projects in fortran. Use it at your own risk of learning as well.
 
 If you already have meson and doxygen installed and would like to compile this code, do:
 
