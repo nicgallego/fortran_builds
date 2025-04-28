@@ -1,6 +1,6 @@
 # Using this code
 
-This is a project made out of dummy code taken from tutorials of the different tools I put together, for learning how to interconnect a build system with documentation and testing systems for projects in fortran. Use it at your own risk of learning as well.
+This is a project made out of dummy code taken from tutorials of the different tools I put together, for learning how to interconnect a build system with documentation and testing systems for projects in fortran. 
 
 If you already have meson and doxygen installed and would like to compile this code, do:
 
@@ -19,7 +19,12 @@ And run the tests through meson with
 meson test -C build
 ```
 
-[comming soon], generate documentation using Doxygen FIXME
+to generate documentation using Doxygen, compile the `doc` target with:
+```
+meson compile doc -C build
+```
+
+and then open the `index.html` file located in `build\html` with a web browser.
 
 # Buildsystems for fortran
 
@@ -82,6 +87,6 @@ After an overview of available alternatives documented in the [fortran-wiki](htt
 We have achieved (with chatgpt assisting me parse some sparse documentation)
 - to set up a build system for Fortran project using meson
 - document the code using Doxygen blocks with the help of UltiSnips.
-- [FIXME] integrate doc target into meson 
+- integrate doc target into meson 
 - to add test-drive as testing system and integrate it to meson project.
 

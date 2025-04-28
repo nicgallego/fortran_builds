@@ -19,6 +19,7 @@ subroutine collect_suite1(testsuite)
 
 end subroutine collect_suite1
 
+!> @brief @test an example of a valid condition
 subroutine test_valid(error)
   type(error_type), allocatable, intent(out) :: error
   call check(error, 1 + 2 == 3)
@@ -30,6 +31,7 @@ subroutine test_valid(error)
 
 end subroutine test_valid
 
+!> @brief @test an example of an invalid condition
 subroutine test_invalid(error)
   type(error_type), allocatable, intent(out) :: error
   call test_failed(error, "Test failed", "additional context")
